@@ -1,8 +1,8 @@
 // Copyright 2020 Shapiro Maksim
-#include "include/figure_capacity.h"
+#include <gtest/gtest.h>
 #define _USE_MATH_DEFINES
 #include <math.h>
-#include <gtest/gtest.h>
+#include "include/figure_capacity.h"
 
 TEST(Sphere, Can_create_sphere) {
     // Arrange & Act & Assert
