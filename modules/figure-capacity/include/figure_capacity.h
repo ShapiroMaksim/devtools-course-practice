@@ -16,4 +16,15 @@ class Sphere : public Figure {
     double getRadius();
     double capacity();
 };
+
+class Cylinder : public Figure {
+    double radius;
+    double height;
+ public:
+    Cylinder();
+    Cylinder(double _radius, double _height);
+    double getRadius();
+    double getHeight();
+    double capacity();
+};
 #endif  // MODULES_FIGURE_CAPACITY_INCLUDE_FIGURE_CAPACITY_H_
