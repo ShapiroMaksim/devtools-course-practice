@@ -27,4 +27,17 @@ class Cylinder : public Figure {
     double getHeight();
     double capacity();
 };
+
+class Parallelepiped : public Figure {
+    double width;
+    double length;
+    double height;
+ public:
+     Parallelepiped();
+     Parallelepiped(double _width, double _length, double _height);
+     double getWidth();
+     double getLength();
+     double getHeight();
+     double capacity();
+};
 #endif  // MODULES_FIGURE_CAPACITY_INCLUDE_FIGURE_CAPACITY_H_

@@ -48,3 +48,37 @@ double Cylinder::getHeight() {
 double Cylinder::capacity() {
     return radius * radius * M_PI * height;
 }
+
+Parallelepiped::Parallelepiped() {
+    width = 1;
+    length = 1;
+    height = 1;
+}
+
+Parallelepiped::Parallelepiped(double _width, double _length, double _height) {
+    if (_width <= 0)
+        throw "Invalid width";
+    if (_length <= 0)
+        throw "Invalid length";
+    if (_height <= 0)
+        throw "Invalid height";
+    width = _width;
+    length = _length;
+    height = _height;
+}
+
+double Parallelepiped::getWidth() {
+    return width;
+}
+
+double Parallelepiped::getLength() {
+    return length;
+}
+
+double Parallelepiped::getHeight() {
+    return height;
+}
+
+double Parallelepiped::capacity() {
+    return width * length * height;
+}
