@@ -8,8 +8,8 @@
 
 class application {
  public:
-	 std::string operator()(int argc, char** argv);
-	 Figure* create(/*int argc, char** argv*/std::vector<std::string> arg);
+    std::string operator()(int argc, char** argv);
+    Figure* create(std::vector<std::string> arg);
 };
 
 #endif  // MODULES_FIGURE_CAPACITY_INCLUDE_FIGURE_CAPACITY_APP_H_

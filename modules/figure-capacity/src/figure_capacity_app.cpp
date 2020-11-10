@@ -7,41 +7,40 @@
 #include <sstream>
 
 std::string application::operator()(int argc, char** argv) {
-	Figure* _figure = NULL;
-	std::vector<std::string> arg;
-	for (int i = 1; i < argc; i++) {
-		arg.push_back(argv[i]);
-	}
-	_figure = create(arg);
-	double capacity = _figure->capacity();
-	//std::cout << capacity;
-	std::ostringstream strs;
-	strs << "Capacity of figure: " << capacity;
-	return strs.str();
+    Figure* _figure = NULL;
+    std::vector<std::string> arg;
+    for (int i = 1; i < argc; i++) {
+        arg.push_back(argv[i]);
+    }
+    _figure = create(arg);
+    double capacity = _figure->capacity();
+    std::ostringstream strs;
+    strs << "Capacity of figure: " << capacity;
+    return strs.str();
 }
 
 Figure* application::create(std::vector<std::string> arg) {
-	Figure* result = NULL;
-	if (arg[0] == "Sphere") {
-		if (arg.size() < 2) {
-			throw "Missing parameters";
-		}
-		result = new Sphere(std::stof(arg[1]));
-	}
-	else if (arg[0] == "Cylinder") {
-		if (arg.size() < 3) {
-			throw "Missing parameters";
-		}
-		result = new Cylinder(std::stof(arg[1]), std::stof(arg[2]));
-	}
-	else if (arg[0] == "Parallelepiped") {
-		if (arg.size() < 4) {
-			throw "Missing parameters";
-		}
-		result = new Parallelepiped(std::stof(arg[1]), std::stof(arg[2]), std::stof(arg[3]));
-	}
-	else {
-		throw "Invalid figure type";
-	}
-	return result;
+    Figure* result = NULL;
+    if (arg[0] == "Sphere") {
+        if (arg.size() < 2) {
+            throw "Missing parameters";
+        }
+        result = new Sphere(std::stof(arg[1]));
+    }
+    else if (arg[0] == "Cylinder") {
+        if (arg.size() < 3) {
+            throw "Missing parameters";
+        }
+        result = new Cylinder(std::stof(arg[1]), std::stof(arg[2]));
+    }
+    else if (arg[0] == "Parallelepiped") {
+        if (arg.size() < 4) {
+            throw "Missing parameters";
+        }
+        result = new Parallelepiped(std::stof(arg[1]), std::stof(arg[2]), std::stof(arg[3]));
+    }
+    else {
+        throw "Invalid figure type";
+    }
+    return result;
 }
