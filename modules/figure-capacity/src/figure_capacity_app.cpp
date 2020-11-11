@@ -8,7 +8,7 @@
 #include <sstream>
 
 std::string application::operator()(int argc, const char** argv) {
-    Figure* _figure = NULL;
+    Figure* _figure = nullptr;
     std::vector<std::string> arg;
     if (argc < 1) {
         throw "No parameters";
@@ -24,7 +24,7 @@ std::string application::operator()(int argc, const char** argv) {
 }
 
 Figure* application::create(std::vector<std::string> arg) {
-    Figure* result = NULL;
+    Figure* result = nullptr;
     if (arg[0] == "Sphere") {
         if (arg.size() < 2) {
             throw "Missing parameters";
