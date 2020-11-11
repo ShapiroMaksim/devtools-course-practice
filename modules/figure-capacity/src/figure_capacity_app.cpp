@@ -29,20 +29,21 @@ Figure* application::create(std::vector<std::string> arg) {
             throw "Missing parameters";
         }
         result = new Sphere(std::stof(arg[1]));
-    }
-    else if (arg[0] == "Cylinder") {
+    } else if (arg[0] == "Cylinder") {
         if (arg.size() < 3) {
             throw "Missing parameters";
         }
         result = new Cylinder(std::stof(arg[1]), std::stof(arg[2]));
-    }
-    else if (arg[0] == "Parallelepiped") {
+    } else if (arg[0] == "Parallelepiped") {
         if (arg.size() < 4) {
             throw "Missing parameters";
         }
-        result = new Parallelepiped(std::stof(arg[1]), std::stof(arg[2]), std::stof(arg[3]));
-    }
-    else {
+        double _arg[3];
+        _arg[0] = std::stof(arg[1]);
+        _arg[1] = std::stof(arg[2]);
+        _arg[2] = std::stof(arg[3]);
+        result = new Parallelepiped(_arg[0], _arg[1], _arg[2]);
+    } else {
         throw "Invalid figure type";
     }
     return result;
