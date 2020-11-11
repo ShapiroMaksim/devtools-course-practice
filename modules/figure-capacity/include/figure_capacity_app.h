@@ -8,7 +8,7 @@
 
 class application {
  public:
-    std::string operator()(int argc, char** argv);
+    std::string operator()(int argc, const char** argv);
     Figure* create(std::vector<std::string> arg);
 };
 

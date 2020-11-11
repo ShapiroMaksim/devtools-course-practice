@@ -3,7 +3,7 @@
 #include <string>
 #include "include/figure_capacity_app.h"
 
-int main(int argc, char** argv) {
+int main(int argc, const char** argv) {
     if (argc == 0) {
         return -1;
     }

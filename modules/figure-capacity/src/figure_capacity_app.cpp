@@ -7,7 +7,7 @@
 #include <vector>
 #include <sstream>
 
-std::string application::operator()(int argc, char** argv) {
+std::string application::operator()(int argc, const char** argv) {
     Figure* _figure = NULL;
     std::vector<std::string> arg;
     if (argc < 1) {
