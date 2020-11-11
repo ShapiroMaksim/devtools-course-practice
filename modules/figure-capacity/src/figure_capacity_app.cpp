@@ -4,6 +4,7 @@
 #include <math.h>
 #include <iostream>
 #include <string>
+#include <vector>
 #include <sstream>
 
 std::string application::operator()(int argc, char** argv) {
