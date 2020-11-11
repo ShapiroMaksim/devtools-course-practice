@@ -1,10 +1,10 @@
 // Copyright 2020 Shapiro Maksim
 #ifndef MODULES_FIGURE_CAPACITY_INCLUDE_FIGURE_CAPACITY_APP_H_
 #define MODULES_FIGURE_CAPACITY_INCLUDE_FIGURE_CAPACITY_APP_H_
+#include <include/figure_capacity.h>
 #include <math.h>
 #include <string>
 #include <vector>
-#include "figure_capacity.h"
 
 class application {
  public:

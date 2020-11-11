@@ -9,6 +9,9 @@
 std::string application::operator()(int argc, char** argv) {
     Figure* _figure = NULL;
     std::vector<std::string> arg;
+    if (argc < 1) {
+        throw "No parameters";
+    }
     for (int i = 1; i < argc; i++) {
         arg.push_back(argv[i]);
     }
