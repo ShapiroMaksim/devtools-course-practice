@@ -5,7 +5,7 @@
 
 int main(int argc, const char** argv) {
     if (argc == 1) {
-        return -1;
+        return 1;
     }
     application app;
     std::string out = app(argc, argv);
