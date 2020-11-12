@@ -4,8 +4,8 @@
 #include "include/figure_capacity_app.h"
 
 int main(int argc, const char** argv) {
-    if (argc == 0) {
-        return -1;
+    if (argc == 1) {
+        throw "No parameters";
     }
     application app;
     std::string out = app(argc, argv);
